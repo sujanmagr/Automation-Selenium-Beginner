@@ -1,0 +1,6 @@
+username,password
+standard_user,secret_sauce
+validuser2, 
+invaliduser,wrongpass
+ ,emptypass
+
