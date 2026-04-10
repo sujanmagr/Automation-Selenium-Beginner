@@ -1,22 +1,22 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
-from selenium.webdriver.support.ui import Select
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# import time
+# from selenium.webdriver.support.ui import Select
 
-driver=webdriver.Chrome()
-wait=WebDriverWait(driver, 10)
-driver.maximize_window()
-url="https://www.saucedemo.com/"
-driver.get(url)
-time.sleep(2)
-username=driver.find_element(By.XPATH, "//input[@name = 'user-name']")
-username.send_keys("standard_user")
-password=driver.find_element(By.XPATH,"//input[@id='password']")
-password.send_keys("secret_sauce")
-login_button=driver.find_element(By.ID, "login-button")
-login_button.click()
+# driver=webdriver.Chrome()
+# wait=WebDriverWait(driver, 10)
+# driver.maximize_window()
+# url="https://www.saucedemo.com/"
+# driver.get(url)
+# time.sleep(2)
+# username=driver.find_element(By.XPATH, "//input[@name = 'user-name']")
+# username.send_keys("standard_user")
+# password=driver.find_element(By.XPATH,"//input[@id='password']")
+# password.send_keys("secret_sauce")
+# login_button=driver.find_element(By.ID, "login-button")
+# login_button.click()
 # try:
 #     print("Hello this is try block")
 #     login_button.click()
@@ -24,7 +24,7 @@ login_button.click()
 # except:
 #     print("This is except block")
 #     print("The button is not clicked")
-time.sleep(3)
+# time.sleep(3)
 
 
 
@@ -37,7 +37,7 @@ time.sleep(3)
 # time.sleep(3)
 # final_element=driver.find_element(By.ID, "add-to-cart-sauce-labs-onesie")
 # final_element.click()
-driver.quit()
+# driver.quit()
 
 
 # url="https://www.saucedemo.com/"
@@ -101,11 +101,28 @@ driver.quit()
 
 
 
-from file import myclass
+# from file import myclass
+# myobj=myclass()
+# myobj.printag()
 
-myobj=myclass()
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+driver=webdriver.Chrome()
+driver.maximize_window()
+time.sleep(2)
+url="https://www.saucedemo.com/"
+driver.get(url)
+time.sleep(2)
+username=driver.find_element(By.XPATH, "//*[@id='user-name']")
+username.send_keys("standard_user")
+password=driver.find_element(By.XPATH, "//*[@id='password']")
+password.send_keys("secret_sauce")
+login_button=driver.find_element(By.ID, "login-button")
+login_button.click()
+time.sleep(3)
+driver.quit()
 
-myobj.printag()
 
 
 
